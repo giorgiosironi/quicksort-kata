@@ -1,0 +1,13 @@
+{
+    "name": "giorgiosironi/quicksort-kata",
+    "description": "Quicksort kata using Eris for property-based testing",
+    "require": {
+        "giorgiosironi/eris": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Giorgio Sironi",
+            "email": "info@giorgiosironi.com"
+        }
+    ]
+}
