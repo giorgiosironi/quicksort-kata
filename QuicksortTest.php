@@ -14,7 +14,7 @@ class QuicksortTest extends \PHPUnit_Framework_TestCase
             ])
             ->then(function($list) {
                 $result = quicksort($list);
-                $this->assertIsOrdered($result);
+                $this->assertIsOrdered($result, $list);
             });
     }
 
@@ -26,14 +26,14 @@ class QuicksortTest extends \PHPUnit_Framework_TestCase
             ])
             ->then(function($list) {
                 $result = quicksort($list);
-                $this->assertEquals(count($list), count($result));
+                $this->assertEquals(count($list), count($result), var_export($list, true));
             });
     }
 
-    private function assertIsOrdered(array $list)
+    private function assertIsOrdered(array $list, array $input)
     {
         for ($i = 0; $i < count($list) - 1; $i++) {
-            $this->assertLessThanOrEqual($list[$i], $list[$i+1], var_export($list, true));
+            $this->assertTrue($list[$i] <= $list[$i+1], var_export($list, true) . " from input " . var_export($input, true));
         }
     }
 }
