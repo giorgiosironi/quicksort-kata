@@ -43,17 +43,20 @@ function quicksort(array $input)
     if ($input == []) {
         return [];
     }
+    $pickAllThat = function(callable $condition) use ($input) {
+        return array_values(array_filter($input, $condition));
+    };
     $pivotIndex = (int) floor(count($input) / 2);
     $pivot = $input[$pivotIndex];
-    $leftPartition = array_values(array_filter($input, function($number) use ($pivot) {
+    $leftPartition = $pickAllThat(function($number) use ($pivot) {
         return $number < $pivot;
-    }));
-    $middlePartition = array_values(array_filter($input, function($number) use ($pivot) {
+    });
+    $middlePartition = $pickAllThat(function($number) use ($pivot) {
         return $number == $pivot;
-    }));
-    $rightPartition = array_values(array_filter($input, function($number) use ($pivot) {
+    });
+    $rightPartition = $pickAllThat(function($number) use ($pivot) {
         return $number > $pivot;
-    }));
+    });
     return array_values(array_merge(
         quicksort($leftPartition),
         $middlePartition,
