@@ -40,6 +40,9 @@ class QuicksortTest extends \PHPUnit_Framework_TestCase
 
 function quicksort(array $input)
 {
+    if (count($input) == 1) {
+        return $input;
+    }
     if ($input == []) {
         return [];
     }
