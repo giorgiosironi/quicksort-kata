@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/giorgiosironi/eris.git",
-                "reference": "b26ff71c06a1ca9b4f00ddaba9cc14da89d45547"
+                "reference": "1447b178136b015b93674824475964bf31d3b01a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giorgiosironi/eris/zipball/b26ff71c06a1ca9b4f00ddaba9cc14da89d45547",
-                "reference": "b26ff71c06a1ca9b4f00ddaba9cc14da89d45547",
+                "url": "https://api.github.com/repos/giorgiosironi/eris/zipball/1447b178136b015b93674824475964bf31d3b01a",
+                "reference": "1447b178136b015b93674824475964bf31d3b01a",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +99,7 @@
                 }
             ],
             "description": "PHP library for property-based testing. Integrates with PHPUnit.",
-            "time": "2014-12-20 11:27:30"
+            "time": "2014-12-23 13:47:44"
         },
         {
             "name": "phpunit/php-code-coverage",
